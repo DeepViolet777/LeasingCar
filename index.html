@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>LeasingCar</title>
+    <meta name="description" content="Leasing car service">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header_wrapper">
+                <a class="header_logo logo">
+                    <img class="logo_img" src="img/Logo.svg" alt="LeasingCar logo" title="LeasingCar logo">
+                    <div class="logo_subtitle">лизинговая компания</div>
+                </a>
+                <nav class="header_menu menu">
+                    <ul class="menu_list">
+                        <li class="menu_item">
+                            <a class="menu_link" href="#">Лизинг</a>
+                            <ul class="menu_sub-menu sub-menu">
+                                <li class="sub-menu_item">
+                                    <a class="sub-menu_link" href="#">Для личного пользования</a>
+                                </li>
+                                <li class="sub-menu_item">
+                                    <a class="sub-menu_link" href="#">Для юридических лиц</a>
+                                </li>
+                                <li class="sub-menu_item">
+                                    <a class="sub-menu_link" href="">Калькулятор</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu_item">
+                            <a class="menu_link" href="#">Каталог</a>
+                        </li>
+                        <li class="menu_item">
+                            <a class="menu_link" href="#">О нас</a>
+                        </li>
+                    </ul>
+                </nav>
+                <input type="button" class="header_btn order_btn" value="Оставить заявку">
+            </div>
+        </header>
+
+        <section class="slider">
+            <div class="slick-slider">
+                <div class="slick-slide slide">
+                    <div class="slide_slide-content">
+                        <div class="slide_title">Авто в лизинг для физических лиц </div>
+                        <div class="slide_subtitle">Получите машину за 5 дней</div>
+                        <input type="button" class="slide_btn order_btn" value="Оставить заявку">
+                    </div>
+                </div>
+                <div class="slick-slide slide">
+                    <div class="slide_slide-content">
+                        <div class="slide_title">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+                        <div class="slide_subtitle">Non maxime incidunt totam explicabo nesciunt</div>
+                        <input type="button" class="slide_btn order_btn" value="Оставить заявку">
+                    </div>
+                </div>
+                <div class="slick-slide slide">
+                    <div class="slide_slide-content">
+                        <div class="slide_title">Maiores provident nostrum iure dolore fuga consequuntur</div>
+                        <div class="slide_subtitle">Pariatur delectus adipisci rerum labore </div>
+                        <input type="button" class="slide_btn order_btn" value="Оставить заявку">
+                    </div>
+                </div>
+                <div class="slick-slide slide">
+                    <div class="slide_slide-content">
+                        <div class="slide_title">Авто в лизинг для физических лиц </div>
+                        <div class="slide_subtitle">Получите машину за 5 дней</div>
+                        <input type="button" class="slide_btn order_btn" value="Оставить заявку">
+                    </div>
+                </div>
+                <div class="slick-slide slide">
+                    <div class="slide_slide-content">
+                        <div class="slide_title">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+                        <div class="slide_subtitle">Non maxime incidunt totam explicabo nesciunt</div>
+                        <input type="button" class="slide_btn order_btn" value="Оставить заявку">
+                    </div>
+                </div>
+                <div class="slick-slide slide">
+                    <div class="slide_slide-content">
+                        <div class="slide_title">Maiores provident nostrum iure dolore fuga consequuntur</div>
+                        <div class="slide_subtitle">Pariatur delectus adipisci rerum labore </div>
+                        <input type="button" class="slide_btn order_btn" value="Оставить заявку">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="calc">
+            <h2 class="calc_title">Рассчитайте стоимость автомобиля в лизинг</h2>
+            <form action="" method="post">
+                <div class="calc_wrapper">
+                    <div class="calc_car-cost">
+                        <label for="car-cost_range">Стоимость автомобиля</label>
+                        <div class="range_container">
+                        <input type="range" name="car-cost_range" class="car-cost_range" min="1000000" max="6000000"
+                            step="1">
+                        </div>
+                        <input class="car-cost_num field-num" min="1000000" max="6000000" type="number">
+                    </div>
+                    <div class="calc_init-fee">
+                        <label for="init-fee_range">Первоначальный взнос</label>
+                        <input type="range" name="init-fee_range" class="init-fee_range" min="1000000" max="6000000"
+                            step="1">
+                        <input class="init-fee_num field-num" min="1000000" max="6000000" type="number">
+                    </div>
+                    <div class="calc_lease-term">
+                        <label for="lease-term_range">Срок лизинга</label>
+                        <input type="range" name="lease-term_range" class="lease-term_range" min="1" max="60"
+                            step="1">
+                        <input class="lease-term_num field-num" min="1" max="60" type="number">
+                    </div>
+                </div>
+            </form>
+        </section>
+        <div class="popup"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

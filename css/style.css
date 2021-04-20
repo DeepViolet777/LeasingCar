@@ -1,0 +1,479 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Gilroy';
+  src: url("../fonts/Gilroy-Regular.eot");
+  src: local("☺"), url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy-Regular.ttf") format("truetype"), url("../fonts/Gilroy-Regular.svg") format("svg"), url("../fonts/Gilroy-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url("../fonts/Gilroy-Bold.eot");
+  src: local("☺"), url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff"), url("../Gilroy-Bold.ttf") format("truetype"), url("../fonts/Gilroy-Bold.svg") format("svg"), url("../fonts/Gilroy-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nekst';
+  src: url("../fonts/Nekst.eot");
+  src: local("☺"), url("../fonts/Nekst-Black.woff") format("woff"), url("../fonts/Nekst-Black.woff2") format("woff2"), url("../fonts/Nekst-Black.ttf") format("truetype"), url("../fonts/Nekst-Black.svg") format("svg"), url("../fonts/Nekst-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Gilroy', sans-serif;
+  font-family: 'Nekst', sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  color: #575757;
+  max-width: 1440px;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.order_btn {
+  outline: none;
+  border-radius: 40px;
+  white-space: nowrap;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  border: none;
+  color: #FFFFFF;
+  background-color: #FF9514;
+  font-family: 'Gilroy';
+  font-weight: 700;
+  padding: 12px 24px;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.order_btn:hover {
+  background-color: #111111;
+}
+
+.order_btn:active {
+  background-color: #575757;
+}
+
+.order_btn:disabled {
+  background-color: rgba(255, 149, 20, 0.4);
+}
+
+.container {
+  width: 1344px;
+  margin: 0 auto;
+}
+
+.header {
+  height: 90px;
+  font-family: 'Gilroy';
+  font-weight: 700;
+  position: fixed;
+  z-index: 1;
+  background-color: #FFFFFF;
+}
+
+.header_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1344px;
+  margin: 0 auto;
+  margin-top: 21px;
+}
+
+.header_btn {
+  color: #FF9514;
+  border: 1px solid #FF9514;
+  background-color: #FFFFFF;
+  margin-left: 24px;
+}
+
+.header_btn:hover {
+  background-color: #FF9514;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  padding: 13px 25px;
+}
+
+.header_btn:active {
+  background-color: #FFA83D;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  padding: 13px 25px;
+}
+
+.header_btn:disabled {
+  color: rgba(255, 149, 20, 0.4);
+  border: 1px solid rgba(255, 149, 20, 0.4);
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 7px;
+}
+
+.logo_subtitle {
+  height: 30px;
+  width: 195px;
+  margin-left: 17.5px;
+  margin-top: 5px;
+  padding-left: 17px;
+  padding-top: 5px;
+  font-weight: 400;
+  letter-spacing: 0.92px;
+  color: rgba(17, 17, 17, 0.5);
+  border-left: 1px solid #c4c4c4;
+  white-space: nowrap;
+}
+
+.menu_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 256px;
+  margin-left: 480px;
+  margin-top: 12px;
+}
+
+.menu_list li:hover .sub-menu {
+  display: block;
+}
+
+.menu_item {
+  position: relative;
+}
+
+.menu_link {
+  display: inline-block;
+  color: #575757;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  padding: 6px 16px;
+  border-radius: 8px;
+}
+
+.menu_link:hover {
+  background-color: #F3F3F4;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  font-weight: 400;
+  border-radius: 15px;
+  background-color: #FFFFFF;
+  border: 1px solid #F3F3F4;
+  overflow: hidden;
+}
+
+.sub-menu_item:hover {
+  background-color: #F3F3F4;
+}
+
+.sub-menu_link {
+  display: inline-block;
+  width: 240px;
+  color: #111111;
+  padding-top: 8px;
+  padding-left: 16px;
+  padding-bottom: 8px;
+}
+
+.slider {
+  width: 1344px;
+  height: 473px;
+  top: 90px;
+  position: relative;
+}
+
+.slide {
+  width: 1344px;
+  height: 473px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 32px;
+  background-color: #000000;
+  margin: 0 auto;
+  font-family: "Nekst", sans-serif;
+  color: #FFFFFF;
+  background-image: url(../img/slider_img.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.slide_slide-content {
+  position: absolute;
+  margin-top: 70px;
+  margin-left: 70px;
+}
+
+.slide_title {
+  font-size: 54px;
+  line-height: 48.6px;
+  width: 585px;
+}
+
+.slide_subtitle {
+  margin-top: 32px;
+  font-size: 30px;
+  line-height: 36px;
+  width: 398px;
+}
+
+.slide_btn {
+  margin-top: 24px;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-arrow {
+  font-size: 0;
+}
+
+.slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  bottom: 75px;
+  right: 339px;
+  font-size: 0;
+  width: 134px;
+}
+
+.slick-dots .slick-active button {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+}
+
+.slick-dots button {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  opacity: 0.4;
+  outline: none;
+  border: none;
+  padding: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.calc {
+  margin-top: 100px;
+  /* input[type=range] {
+        -webkit-appearance: none;  Скрывает слайдер, чтобы можно было создать свой 
+        width: 427px  Указание параметра ширины требуется для Firefox. 
+    
+
+       
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+   
+  input[type=range]:focus {
+    outline: none; /* Убирает голубую границу у элемента. Хотя, возможно, и стоит создавать некоторое оформления для состояния фокуса в целях обеспечения доступности. 
+  }
+   
+  input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent; /* Скрывает слайдер, чтобы можно было добавить собственные стили. 
+    border-color: transparent;
+    color: transparent;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: $dark-orange;
+    cursor: pointer;
+    margin-top: -6px;
+  }
+   
+
+
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 380px;
+    height: 1px;
+    cursor: pointer;
+    background: $light-grey;
+    border-radius: 1.3px;
+    
+  }
+   
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: $light-grey;
+  }
+   
+  input[type=range]::-moz-range-track {
+    width: 380px;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #3071a9;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+  }
+   
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #2a6495;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #3071a9;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #3071a9;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #367ebd;
+  }
+  */
+  /* Firefox */
+}
+
+.calc_title {
+  display: inline-block;
+  font-family: "Nekst", sans-serif;
+  font-size: 54px;
+  line-height: 90%;
+  color: #111111;
+  width: 753px;
+}
+
+.calc_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.calc input::-webkit-outer-spin-button,
+.calc input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.calc input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.calc .range_container {
+  position: relative;
+  width: 400px;
+  /*input range width*/
+  height: 20px;
+  /*input range height*/
+}
+
+.calc input[type='range'] {
+  -webkit-appearance: none;
+  position: absolute;
+  width: 400px;
+  height: 20px;
+  background-color: #F3F3F4;
+  top: -2px;
+  left: -2px;
+  outline: none;
+  overflow: hidden;
+}
+
+.calc input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-box-shadow: -400px 0 0 400px #FF9514;
+          box-shadow: -400px 0 0 400px #FF9514;
+  cursor: pointer;
+  position: relative;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #FF9514;
+}
+
+.calc input[type='range']::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  height: 2px;
+  color: #F3F3F4;
+}
+
+.calc input[type="range"]::-moz-range-progress {
+  background-color: #43e5f7;
+}
+
+.calc input[type="range"]::-moz-range-track {
+  background-color: #9a905d;
+}
+
+.calc input[type="range"]::-ms-fill-lower {
+  background-color: #43e5f7;
+}
+
+.calc input[type="range"]::-ms-fill-upper {
+  background-color: #9a905d;
+}
+
+.calc .field-num {
+  background-color: #F3F3F4;
+  width: 427px;
+  height: 68px;
+  border-radius: 16px;
+  border: none;
+  outline: none;
+}
+/*# sourceMappingURL=style.css.map */

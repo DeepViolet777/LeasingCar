@@ -256,7 +256,7 @@ a {
     display: flex;
     border-radius: 32px;
     background-color: #000000;
-    margin: 0 auto;
+    margin: 5px auto 0;
     font-family: $font-nekst;
     color: #FFFFFF;
     background-image: url(../img/slider_img.png);
@@ -288,23 +288,59 @@ a {
 }
 
 .slick {
+    position: relative;
+
     &-list {
         overflow: hidden;
     }
 
     &-arrow {
         font-size: 0;
-        
-        .slick-prev {}
+        position: absolute;
+        z-index: 1;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        cursor: pointer;
+        transition: 0.3 ease;
 
-        .slick-next {}
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        &:active {
+            background-color: rgba(255, 255, 255, 0.6);
+        }
     }
+
+    &-prev {
+        margin-top: 399px;
+        margin-left: 1211px;
+        width: 24px;
+        height: 24px;
+        background-image: url(../img/backward-arrow.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 34%;
+    }
+
+    &-next {
+        width: 48px;
+        height: 48px;
+        background-image: url(../img/forward-arrow.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 34%;
+        margin-top: -95px;
+        margin-left: 1252px;
+        
+    }
+
 
     &-dots {
         display: flex;
         justify-content: space-between;
         position: absolute;
-        bottom: 75px;
+        bottom: 70px;
         right: 339px;
         font-size: 0;
         width: 134px;
@@ -341,9 +377,10 @@ a {
         width: 753px;
     }
 
-    &_wrapper{
+    &_wrapper {
         display: flex;
     }
+
     /* input[type=range] {
         -webkit-appearance: none;  Скрывает слайдер, чтобы можно было создать свой 
         width: 427px  Указание параметра ширины требуется для Firefox. 
@@ -442,13 +479,15 @@ input[type=range]::-webkit-slider-thumb {
     }
 
 
-    .range_container{
+    .range_container {
         position: relative;
-        width: 400px; /*input range width*/
-        height: 20px; /*input range height*/
+        width: 400px;
+        /*input range width*/
+        height: 20px;
+        /*input range height*/
         //overflow: hidden;
     }
-    
+
     input[type='range'] {
         -webkit-appearance: none;
         position: absolute;
@@ -464,44 +503,47 @@ input[type=range]::-webkit-slider-thumb {
     input[type='range']::-webkit-slider-thumb {
         -webkit-appearance: none;
         //cursor: ew-resize;
-       
+
         box-shadow: -400px 0 0 400px $dark-orange;
-        
+
         cursor: pointer;
         position: relative;
-            height: 20px;
-            width: 20px;
-            border-radius: 50%;
-            background: $dark-orange;
-           
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background: $dark-orange;
+
     }
 
-    
 
-    
+
+
     input[type='range']::-webkit-slider-runnable-track {
         -webkit-appearance: none;
         height: 2px;
         color: $light-grey;
-        
-    }
-    
 
-    
+    }
+
+
+
     input[type="range"]::-moz-range-progress {
-        background-color: #43e5f7; 
+        background-color: #43e5f7;
     }
-    input[type="range"]::-moz-range-track {  
-        background-color: #9a905d;
-    }
-    input[type="range"]::-ms-fill-lower {
-        background-color: #43e5f7; 
-    }
-    input[type="range"]::-ms-fill-upper {  
+
+    input[type="range"]::-moz-range-track {
         background-color: #9a905d;
     }
 
-    .field-num{
+    input[type="range"]::-ms-fill-lower {
+        background-color: #43e5f7;
+    }
+
+    input[type="range"]::-ms-fill-upper {
+        background-color: #9a905d;
+    }
+
+    .field-num {
         background-color: $light-grey;
         width: 427px;
         height: 68px;

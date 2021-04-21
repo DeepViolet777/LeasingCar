@@ -227,7 +227,7 @@ a {
   display: flex;
   border-radius: 32px;
   background-color: #000000;
-  margin: 0 auto;
+  margin: 5px auto 0;
   font-family: "Nekst", sans-serif;
   color: #FFFFFF;
   background-image: url(../img/slider_img.png);
@@ -258,12 +258,53 @@ a {
   margin-top: 24px;
 }
 
+.slick {
+  position: relative;
+}
+
 .slick-list {
   overflow: hidden;
 }
 
 .slick-arrow {
   font-size: 0;
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: 0.3 ease;
+  transition: 0.3 ease;
+}
+
+.slick-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.slick-arrow:active {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.slick-prev {
+  margin-top: 399px;
+  margin-left: 1211px;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/backward-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 34%;
+}
+
+.slick-next {
+  width: 48px;
+  height: 48px;
+  background-image: url(../img/forward-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 34%;
+  margin-top: -95px;
+  margin-left: 1252px;
 }
 
 .slick-dots {
@@ -274,7 +315,7 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: absolute;
-  bottom: 75px;
+  bottom: 70px;
   right: 339px;
   font-size: 0;
   width: 134px;

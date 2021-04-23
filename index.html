@@ -99,29 +99,41 @@
             <form action="" method="post">
                 <div class="calc_wrapper">
                     <div class="calc_car-cost">
-                        <label for="car-cost_range">Стоимость автомобиля</label>
+                        <label class="calc_subtitle" for="car-cost_range">Стоимость автомобиля</label>
+                        <div class="car-cost_container">
+                            <input class="car-cost_num field-num" min="1000000" max="6000000" type="number">
+                        </div>
                         <div class="range_container">
                         <input type="range" name="car-cost_range" class="car-cost_range" min="1000000" max="6000000"
                             step="1">
                         </div>
-                        <input class="car-cost_num field-num" min="1000000" max="6000000" type="number">
                     </div>
                     <div class="calc_init-fee">
-                        <label for="init-fee_range">Первоначальный взнос</label>
+                        <label class="calc_subtitle" for="init-fee_range">Первоначальный взнос</label>
+                        <div class="init-fee_container">
+                        <div class="init-fee_num field-num">3 600 000</div>
+                        <input class="init-fee_percent" type="number" name="" id="" value="13" min="10" max="60">
+                        </div>
+                        <div class="range_container">
                         <input type="range" name="init-fee_range" class="init-fee_range" min="1000000" max="6000000"
                             step="1">
-                        <input class="init-fee_num field-num" min="1000000" max="6000000" type="number">
+                        </div>
                     </div>
                     <div class="calc_lease-term">
-                        <label for="lease-term_range">Срок лизинга</label>
+                        <label class="calc_subtitle" for="lease-term_range">Срок лизинга</label>
+                         <div class="lease-term_container">
+                        <input class="lease-term_num field-num" min="1" max="60" type="number">
+                        </div>
+                        <div class="range_container">
                         <input type="range" name="lease-term_range" class="lease-term_range" min="1" max="60"
                             step="1">
-                        <input class="lease-term_num field-num" min="1" max="60" type="number">
+                        </div>
                     </div>
                 </div>
             </form>
         </section>
-        <div class="popup"></div>
+        <div class="popup">
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"

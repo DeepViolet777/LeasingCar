@@ -196,6 +196,8 @@ a {
   background-color: #FFFFFF;
   border: 1px solid #F3F3F4;
   overflow: hidden;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .sub-menu_item:hover {
@@ -307,6 +309,10 @@ a {
   margin-left: 1252px;
 }
 
+.slick-next :disabled {
+  background-image: url(../img/btn_disabled.svg);
+}
+
 .slick-dots {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -341,92 +347,7 @@ a {
 }
 
 .calc {
-  margin-top: 100px;
-  /* input[type=range] {
-        -webkit-appearance: none;  Скрывает слайдер, чтобы можно было создать свой 
-        width: 427px  Указание параметра ширины требуется для Firefox. 
-    
-
-       
-input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-  }
-   
-  input[type=range]:focus {
-    outline: none; /* Убирает голубую границу у элемента. Хотя, возможно, и стоит создавать некоторое оформления для состояния фокуса в целях обеспечения доступности. 
-  }
-   
-  input[type=range]::-ms-track {
-    width: 100%;
-    cursor: pointer;
-    background: transparent; /* Скрывает слайдер, чтобы можно было добавить собственные стили. 
-    border-color: transparent;
-    color: transparent;
-  }
-
-  input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    background: $dark-orange;
-    cursor: pointer;
-    margin-top: -6px;
-  }
-   
-
-
-  input[type=range]::-webkit-slider-runnable-track {
-    width: 380px;
-    height: 1px;
-    cursor: pointer;
-    background: $light-grey;
-    border-radius: 1.3px;
-    
-  }
-   
-  input[type=range]:focus::-webkit-slider-runnable-track {
-    background: $light-grey;
-  }
-   
-  input[type=range]::-moz-range-track {
-    width: 380px;
-    height: 8.4px;
-    cursor: pointer;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    background: #3071a9;
-    border-radius: 1.3px;
-    border: 0.2px solid #010101;
-  }
-   
-  input[type=range]::-ms-track {
-    width: 100%;
-    height: 8.4px;
-    cursor: pointer;
-    background: transparent;
-    border-color: transparent;
-    border-width: 16px 0;
-    color: transparent;
-  }
-  input[type=range]::-ms-fill-lower {
-    background: #2a6495;
-    border: 0.2px solid #010101;
-    border-radius: 2.6px;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  }
-  input[type=range]:focus::-ms-fill-lower {
-    background: #3071a9;
-  }
-  input[type=range]::-ms-fill-upper {
-    background: #3071a9;
-    border: 0.2px solid #010101;
-    border-radius: 2.6px;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  }
-  input[type=range]:focus::-ms-fill-upper {
-    background: #367ebd;
-  }
-  */
+  margin-top: 150px;
   /* Firefox */
 }
 
@@ -437,12 +358,25 @@ input[type=range]::-webkit-slider-thumb {
   line-height: 90%;
   color: #111111;
   width: 753px;
+  margin-bottom: 30px;
 }
 
 .calc_wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 51px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.calc_subtitle {
+  display: inline-block;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .calc input::-webkit-outer-spin-button,
@@ -457,56 +391,83 @@ input[type=range]::-webkit-slider-thumb {
 
 .calc .range_container {
   position: relative;
-  width: 400px;
-  /*input range width*/
-  height: 20px;
-  /*input range height*/
+  width: 379px;
+  height: 22px;
+  z-index: 1;
+  margin-top: -10px;
+  margin-left: 24px;
 }
 
 .calc input[type='range'] {
   -webkit-appearance: none;
-  position: absolute;
-  width: 400px;
-  height: 20px;
-  background-color: #F3F3F4;
-  top: -2px;
-  left: -2px;
+  width: 379px;
   outline: none;
-  overflow: hidden;
+  height: 20px;
+  background-color: transparent;
+  top: 0;
+  left: 0;
 }
 
 .calc input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
-  -webkit-box-shadow: -400px 0 0 400px #FF9514;
-          box-shadow: -400px 0 0 400px #FF9514;
   cursor: pointer;
-  position: relative;
   height: 20px;
   width: 20px;
   border-radius: 50%;
   background: #FF9514;
+  margin-top: -10px;
 }
 
 .calc input[type='range']::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   height: 2px;
-  color: #F3F3F4;
+  background: -webkit-gradient(linear, left top, right top, color-stop(60%, #ff9514), color-stop(60%, #e1e1e1));
+  background: linear-gradient(90deg, #ff9514 60%, #e1e1e1 60%);
 }
 
 .calc input[type="range"]::-moz-range-progress {
-  background-color: #43e5f7;
+  background-color: #FF9514;
+  height: 2px;
 }
 
 .calc input[type="range"]::-moz-range-track {
-  background-color: #9a905d;
+  background-color: #E1E1E1;
+  height: 2px;
 }
 
-.calc input[type="range"]::-ms-fill-lower {
-  background-color: #43e5f7;
+.calc input[type=range]::-moz-range-thumb {
+  background-color: #FF9514;
+  border: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
 }
 
-.calc input[type="range"]::-ms-fill-upper {
-  background-color: #9a905d;
+.calc input[type=range]::-ms-track {
+  width: 379px;
+  height: 2px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+
+.calc input[type=range]::-ms-fill-lower {
+  background: #FF9514;
+}
+
+.calc input[type=range]::-ms-fill-upper {
+  background: #E1E1E1;
+}
+
+.calc input[type=range]::-ms-thumb {
+  border: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #FF9514;
+  cursor: pointer;
 }
 
 .calc .field-num {
@@ -516,5 +477,90 @@ input[type=range]::-webkit-slider-thumb {
   border-radius: 16px;
   border: none;
   outline: none;
+  margin-top: 24px;
+  font-family: "Nekst", sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  color: #575757;
+  padding-left: 24px;
+  padding-top: 16px;
+}
+
+.calc .car-cost_container {
+  position: relative;
+}
+
+.calc .car-cost_container::after {
+  position: absolute;
+  content: " ";
+  width: 20px;
+  height: 36px;
+  background-image: url(../img/rub.svg);
+  background-repeat: no-repeat;
+  top: 50px;
+  right: 24px;
+}
+
+.calc .lease-term_container {
+  position: relative;
+}
+
+.calc .lease-term_container::after {
+  position: absolute;
+  content: "мес.";
+  font-family: "Nekst", sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  color: #575757;
+  top: 40px;
+  right: 24px;
+  width: 63px;
+  height: 36px;
+}
+
+.calc .init-fee_container {
+  position: relative;
+}
+
+.calc .init-fee_container::before {
+  position: absolute;
+  content: " ";
+  width: 20px;
+  height: 36px;
+  background-image: url(../img/rub.svg);
+  background-repeat: no-repeat;
+  top: 25px;
+  right: 240px;
+  z-index: 1;
+}
+
+.calc .init-fee_container::after {
+  position: absolute;
+  content: "%";
+  width: 20px;
+  height: 24px;
+  top: 21px;
+  right: 17px;
+  font-family: "Nekst", sans-serif;
+  color: #575757;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.calc .init-fee_percent {
+  width: 69px;
+  height: 54px;
+  border-radius: 16px;
+  background-color: #EBEBEC;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  padding: 15px 17px;
+  outline: none;
+  border: none;
+  font-family: "Nekst", sans-serif;
+  color: #575757;
+  font-size: 20px;
+  line-height: 24px;
 }
 /*# sourceMappingURL=style.css.map */

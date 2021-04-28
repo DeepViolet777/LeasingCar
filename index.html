@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="libs/nouislider.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -101,44 +102,59 @@
                     <div class="calc_car-cost">
                         <label class="calc_subtitle" for="car-cost_range">Стоимость автомобиля</label>
                         <div class="car-cost_container">
-                            <input class="car-cost_num field-num" min="1000000" max="6000000" type="number">
+                            <input class="car-cost_num field-num" min="1000000" max="6000000" type="number" step="1">
                         </div>
                         <div class="range_container">
-                        <input type="range" name="car-cost_range" class="car-cost_range" min="1000000" max="6000000"
-                            step="1">
+                           <!-- <input type="range" name="car-cost_range" class="car-cost_range calc_range" min="1000000" max="6000000"
+                                step="1">-->
                         </div>
                     </div>
                     <div class="calc_init-fee">
                         <label class="calc_subtitle" for="init-fee_range">Первоначальный взнос</label>
                         <div class="init-fee_container">
-                        <div class="init-fee_num field-num">3 600 000</div>
-                        <input class="init-fee_percent" type="number" name="" id="" value="13" min="10" max="60">
+                            <div class="init-fee_num field-num">3 600 000</div>
+                            <input class="init-fee_percent" type="number" name="" id="" value="13" min="10" max="60">
                         </div>
                         <div class="range_container">
-                        <input type="range" name="init-fee_range" class="init-fee_range" min="1000000" max="6000000"
-                            step="1">
+                            <input type="range" name="init-fee_range" class="init-fee_range calc_range" min="1000000" max="6000000"
+                                step="1">
                         </div>
                     </div>
                     <div class="calc_lease-term">
                         <label class="calc_subtitle" for="lease-term_range">Срок лизинга</label>
-                         <div class="lease-term_container">
-                        <input class="lease-term_num field-num" min="1" max="60" type="number">
+                        <div class="lease-term_container">
+                            <input class="lease-term_num field-num" min="1" max="60" type="number">
                         </div>
                         <div class="range_container">
-                        <input type="range" name="lease-term_range" class="lease-term_range" min="1" max="60"
-                            step="1">
+                            <input type="range" name="lease-term_range" class="lease-term_range calc_range" min="1" max="60"
+                                step="1">
                         </div>
                     </div>
+                    </div>
+                    <div class="calc_wrapper">
+                    <div class="calc_total-cost">
+                        <span class="calc_subtitle">Сумма договора лизинга</span>
+                        <span class="calc_total-cost-num"></span>
+                    </div>
+
+                    <div class="calc_month-fee">
+                        <span class="calc_subtitle">Ежемесячный платеж от</span>
+                        <span class="month-fee-num"></span>
+                    </div>
+                    <input type="button" class="calc_btn order_btn" value="Оставить заявку">
+                </div>
                 </div>
             </form>
         </section>
         <div class="popup">
+            
         </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="libs/nouislider.min.js"></script>
     <script src="main.js"></script>
 </body>
 

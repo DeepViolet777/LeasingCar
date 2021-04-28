@@ -1,5 +1,4 @@
 
-
 $(document).ready(function(){
     $('.slick-slider').slick({
       slidesToShow: 1,
@@ -21,24 +20,48 @@ $(document).ready(function(){
       onSlide: (value, percent, position) => {},
       onSlideEnd: (value, percent, position) => {}
     });*/
+  });
 
-    var rangeOne = document.getElementByClassName('range_container');
+    const carCostRange = document.querySelector('.car-cost_range')
 
-noUiSlider.create(rangeOne, {
+    const initFeeRange = document.querySelector('.init-fee_range')
+
+    const leaseTermRange = document.querySelector('.lease-term_range')
+
+noUiSlider.create(carCostRange, {
     start: [1000000],
     connect: 'lower',
     range: {
         'min': [1000000],
         'max': [6000000]
     }
-});
+
+ 
 
   });
-  
+
+  noUiSlider.create(initFeeRange, {
+    start: [1000000],
+    connect: 'lower',
+    range: {
+        'min': [1000000],
+        'max': [6000000]
+    }
+
+  });
 
 
+  noUiSlider.create(leaseTermRange, {
+    start: [1000000],
+    connect: 'lower',
+    range: {
+        'min': [1000000],
+        'max': [6000000]
+    }
 
+ 
 
+  });
 
 
 

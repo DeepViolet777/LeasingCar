@@ -348,6 +348,7 @@ a {
 
 .calc {
   margin-top: 150px;
+  margin-bottom: 134px;
   /* Firefox */
   /* input[type='range']::-webkit-slider-thumb {
         -webkit-appearance: none;
@@ -542,6 +543,7 @@ a {
   padding: 14px 92.5px 18px;
   font-size: 30px;
   line-height: 36px;
+  margin-top: 10px;
 }
 
 .calc .noUi-connects {
@@ -566,6 +568,7 @@ a {
           box-shadow: none;
   outline: none;
   margin-top: -3px;
+  cursor: pointer;
 }
 
 .calc .noUi-handle::after, .calc .noUi-handle::before {
@@ -576,6 +579,7 @@ a {
   height: 2px;
   width: 379px;
   margin-left: 24px;
+  margin-right: 24px;
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
